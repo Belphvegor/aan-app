@@ -7,6 +7,9 @@ use App\Http\Controllers\ProductController;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/customer-login', function () {
+    return view('customer-login');
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');

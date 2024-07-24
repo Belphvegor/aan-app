@@ -45,8 +45,9 @@
                                  <!-- item-->
                                  <a href="javascript:void(0);" class="dropdown-item notify-item">
                                      <div class="d-flex align-items-start">
-                                         <img class="d-flex me-2 rounded-circle" src="build/assets/images/users/user-2.jpg"
-                                             alt="Generic placeholder image" height="32">
+                                         <img class="d-flex me-2 rounded-circle"
+                                             src="build/assets/images/users/user-2.jpg" alt="Generic placeholder image"
+                                             height="32">
                                          <div class="w-100">
                                              <h5 class="m-0 font-14">Erwin E. Brown</h5>
                                              <span class="font-12 mb-0">UI Designer</span>
@@ -57,8 +58,9 @@
                                  <!-- item-->
                                  <a href="javascript:void(0);" class="dropdown-item notify-item">
                                      <div class="d-flex align-items-start">
-                                         <img class="d-flex me-2 rounded-circle" src="build/assets/images/users/user-5.jpg"
-                                             alt="Generic placeholder image" height="32">
+                                         <img class="d-flex me-2 rounded-circle"
+                                             src="build/assets/images/users/user-5.jpg" alt="Generic placeholder image"
+                                             height="32">
                                          <div class="w-100">
                                              <h5 class="m-0 font-14">Jacob Deo</h5>
                                              <span class="font-12 mb-0">Developer</span>
@@ -281,9 +283,9 @@
              <li class="dropdown notification-list topbar-dropdown">
                  <a class="nav-link dropdown-toggle nav-user me-0 waves-effect waves-light" data-bs-toggle="dropdown"
                      href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                     <img src="build/assets/images/users/user-6.jpg" alt="user-image" class="rounded-circle">
+                     <img src="build/assets/images/users/profile.jpeg" alt="user-image" class="rounded-circle">
                      <span class="pro-user-name ms-1">
-                         Stanley <i class="mdi mdi-chevron-down"></i>
+                         Alwan Irfan <i class="mdi mdi-chevron-down"></i>
                      </span>
                  </a>
                  <div class="dropdown-menu dropdown-menu-end profile-dropdown ">
@@ -313,10 +315,15 @@
                      <div class="dropdown-divider"></div>
 
                      <!-- item-->
-                     <a href="javascript:void(0);" class="dropdown-item notify-item">
-                         <i class="fe-log-out"></i>
-                         <span>Logout</span>
-                     </a>
+                     <form method="POST" action="{{ route('logout') }}">
+                         @csrf
+                         <a href="{{ route('logout') }}" class="dropdown-item notify-item"
+                             onclick="event.preventDefault(); this.closest('form').submit();">
+                             <i class="fe-log-out me-1"></i>
+                             <span>Logout</span>
+                         </a>
+                     </form>
+
 
                  </div>
              </li>
@@ -383,11 +390,11 @@
 
          <!-- User box -->
          <div class="user-box text-center">
-             <img src="build/assets/images/users/user-6.jpg" alt="user-img" title="Mat Helme"
+             <img src="build/assets/images/users/profile.jpeg" alt="user-img" title="Mat Helme"
                  class="rounded-circle avatar-md">
              <div class="dropdown">
                  <a href="javascript: void(0);" class="text-black dropdown-toggle h5 mt-2 mb-1 d-block"
-                     data-bs-toggle="dropdown">Stanley Parker</a>
+                     data-bs-toggle="dropdown">Alwan Irfan</a>
                  <div class="dropdown-menu user-pro-dropdown">
 
                      <!-- item-->
@@ -409,10 +416,15 @@
                      </a>
 
                      <!-- item-->
-                     <a href="javascript:void(0);" class="dropdown-item notify-item">
-                         <i class="fe-log-out me-1"></i>
-                         <span>Logout</span>
-                     </a>
+                     <form method="POST" action="{{ route('logout') }}">
+                         @csrf
+                         <a href="{{ route('logout') }}" class="dropdown-item notify-item"
+                             onclick="event.preventDefault(); this.closest('form').submit();">
+                             <i class="fe-log-out me-1"></i>
+                             <span>Logout</span>
+                         </a>
+                     </form>
+
 
                  </div>
              </div>
